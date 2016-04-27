@@ -1,0 +1,12 @@
+1.使用 show dbs 命令显示所有数据库
+2.MongoDB创建数据库 use DATABASE_NAME ----(如果输入的数据库名不存在则创建，否则切换到指定数据库)
+3.MongoDB删除数据库 db.dropDatabase() ----删除当前数据库(使用db命令查看当前数据库)
+4.使用 show collections 命令显示当前数据库的集合（类似SQL的数据表）
+5.db.COLLECTION_NAME.insert(document)  ----向指定集合中插入文档（文档类似SQL的数据行）如果指定的集合不存在则创建
+6.db.COLLECTION_NAME.find()  ----查询指定集合的所有文档（数据行）
+7.db.COLLECTION_NAME.update()  ----可以根据条件更新数据  例：db.col.update({'title':'MongoDB 教程'},{$set:{'title':'MongoDB'}})更新title为'MongoDB 教程'为'MongoDB'
+8.db.COLLECTION_NAME.save()   ----根据传入的文档（数据行）来更新数据
+9.db.COLLECTION_NAME.remove(<条件>，justOne:是否只删除一个文档)  例：db.col.remove({'title':'MongoDB 教程'})删除title为'MongoDB 教程'的所有文档
+10.db.COLLECTION_NAME.find().pretty()   ----查询指定集合的所有文档（数据行）：以格式化的方式显示数据
+
+
